@@ -1,0 +1,7 @@
+{
+  "extends": "prattle-shared-tsconfig/nestjs.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "baseUrl": "./"
+  }
+}

@@ -8,7 +8,7 @@ The tech stack will be focused around JavaScript (TypeScript) featuring modern d
 
 - Node.js: The foundation of the backend, Node.js allows for scalable and non-blocking server-side operations.
 
-- Next.js: Next.js handles API endpoints and routing efficiently, ensuring a smooth user experience.
+- Nest.js: Nest.js handles API endpoints and routing efficiently, ensuring a smooth user experience.
 
 - NextAuth.js: For user - authentication, providing support for various authentication providers to give users a secure and seamless login experience.
 
@@ -25,6 +25,8 @@ The tech stack will be focused around JavaScript (TypeScript) featuring modern d
 - Next.js: Next.js extends its capabilities to the frontend, offering server-side rendering, routing, and a comprehensive framework for React applications.
 
 ## DevOps
+
+- Turborepo: Monorepo manager utility to speed up loading and simplify CI/CD processes.
 
 - GitHub: Version control.
 

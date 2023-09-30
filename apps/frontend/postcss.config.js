@@ -1,0 +1,1 @@
+module.exports = require("prattle-shared-config/postcss.config");
