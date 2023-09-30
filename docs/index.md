@@ -1,5 +1,5 @@
 # Prattle
-*A fullstack practice project!*
+*A fullstack educational project!*
 
 ## Documentation
 
