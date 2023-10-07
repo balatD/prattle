@@ -8,17 +8,18 @@
   ],
   "scripts": {
     "build": "turbo run build",
-    "dev": "turbo run dev --parallel",
+    "dev": "dotenv -- turbo run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
     "prettier": "^3.0.0",
-    "turbo": "1.10.12"
+    "turbo": "1.10.12",
+    "dotenv-cli": "7.3.0"
   },
   "engines": {
     "npm": ">=7.0.0",
     "node": ">=14.0.0"
   },
-  "packageManager": "npm@v18.16.0"
+  "packageManager": "npm@18.16.0"
 }

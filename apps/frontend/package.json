@@ -4,20 +4,17 @@
   "description": "Frontend for Prattle",
   "author": "Dragan Balatinac",
   "private": true,
-
   "scripts": {
-    "dev": "next dev",
+    "dev": "dotenv -- cross-var next dev -p %FRONTEND_PORT%",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
-
   "dependencies": {
     "react": "latest",
     "react-dom": "latest",
     "next": "latest"
   },
-
   "devDependencies": {
     "typescript": "latest",
     "@types/react": "latest",
@@ -28,6 +25,9 @@
     "tailwindcss": "latest",
     "eslint": "latest",
     "eslint-config-next": "latest",
-    "prattle-shared-tsconfig": "*"
+    "dotenv": "16.3.1",
+    "@mtrimolet/cross-var": "1.2.1",
+    "prattle-shared-tsconfig": "*",
+    "prattle-shared-config": "*"
   }
 }
