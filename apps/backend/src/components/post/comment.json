@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_post_comments",
+  "info": {
+    "displayName": "Comment",
+    "icon": "discuss"
+  },
+  "options": {},
+  "attributes": {
+    "Body": {
+      "type": "text",
+      "required": true
+    }
+  }
+}
