@@ -8,6 +8,7 @@
   ],
   "scripts": {
     "build": "turbo run build",
+    "start": "dotenv -- turbo run start",
     "dev": "dotenv -- turbo run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
@@ -15,7 +16,8 @@
   "devDependencies": {
     "prettier": "^3.0.0",
     "turbo": "1.10.4",
-    "dotenv-cli": "7.3.0"
+    "dotenv-cli": "7.3.0",
+    "prattle-deployment": "*"
   },
   "engines": {
     "npm": ">=7.0.0",
