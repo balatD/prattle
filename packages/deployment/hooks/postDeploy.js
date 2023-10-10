@@ -6,7 +6,9 @@ const commands = [
     // Install all node dependencies for current project
     'npm install',
     // Builds every app with turborepo
-    'npm run build'
+    'npm run build',
+    // Reload pm2 processes
+    'pm2 reload all'
 ];
 
 module.exports = hookUtility.createCommandString(commands);
