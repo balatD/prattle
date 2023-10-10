@@ -1,3 +1,8 @@
-module.exports = function (commands) {
-    return commands.join(' && ');
-}
+module.exports = {
+    concateCommand: (commands) => {
+        return commands.join(' && ');
+    },
+    debugCommand: (commands) => {
+        console.log(commands.join(' && '));
+    }
+};

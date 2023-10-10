@@ -1,4 +1,4 @@
-// const hookUtility = require("./_hook");
+const hookUtility = require("./_hook");
 
 const commands = [
     '. ~/.bashrc',
@@ -6,10 +6,6 @@ const commands = [
     'npm run start'
 ];
 
-function hookUtility(commands) {
-    return commands.join(' && ');
-}
+// const commandString = hookUtility.concateCommand(commands);
 
-const commandString = hookUtility(commands);
-
-module.exports = commandString;
+module.exports = hookUtility.concateCommand(commands);
