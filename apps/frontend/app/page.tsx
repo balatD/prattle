@@ -16,7 +16,7 @@ export default async function Page() {
       {
         posts.data.map((post) => {
           return (
-            <h1 key={post}>{post.attributes.body}</h1>
+            <h2 key={post}>{post.attributes.body}</h2>
           )
         })
       }
