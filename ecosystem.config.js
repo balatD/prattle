@@ -4,5 +4,3 @@ const pm2Configuration = require('prattle-deployment/pm2-config');
 module.exports = {
     ...pm2Configuration
 }
-
-console.log(pm2Configuration);
