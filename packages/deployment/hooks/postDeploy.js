@@ -8,7 +8,7 @@ const commands = [
     // Builds every app with turborepo
     'npm run build',
     // Reload pm2 processes
-    'pm2 reload all'
+    'pm2 startOrReload all'
 ];
 
 module.exports = hookUtility.createCommandString(commands);
