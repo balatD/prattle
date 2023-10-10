@@ -1,4 +1,5 @@
 module.exports = {
     name: 'frontend',
-    script: 'cd apps/frontend && npm run start'
+    cwd: './apps/frontend',
+    script: 'npm run start'
 };
