@@ -1,10 +1,12 @@
 const production = require('./enviroments/production')
 const staging = require('./enviroments/staging')
-const turborepo = require('./apps/turborepo')
+const backend = require('./apps/backend')
+const frontend = require('./apps/frontend')
 
 module.exports = {
     apps: [
-        turborepo
+        backend,
+        frontend
     ],
     deploy: {
         production: production,
