@@ -1,5 +1,7 @@
 module.exports = {
     name: 'frontend',
     cwd: './apps/frontend',
-    script: 'npm run start',
+    script: 'node server.js',
+    exec_mode: "cluster",
+    instances: "max"
 };
