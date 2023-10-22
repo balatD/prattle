@@ -691,10 +691,10 @@ export interface ApiPostPost extends Schema.CollectionType {
   attributes: {
     body: Attribute.Text & Attribute.Required;
     Comments: Attribute.Component<'post.comment', true>;
-    website_user: Attribute.Relation<
+    users_permissions_user: Attribute.Relation<
       'api::post.post',
       'oneToOne',
-      'api::website-user.website-user'
+      'plugin::users-permissions.user'
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;

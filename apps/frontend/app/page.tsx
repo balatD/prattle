@@ -1,4 +1,4 @@
-async function getData() {
+const getData = async () => {
   const res = await fetch(process.env.STRAPI_API_ENDPOINT + '/posts?populate=*')
 
   if (!res.ok) {
