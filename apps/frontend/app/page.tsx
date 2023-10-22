@@ -1,3 +1,7 @@
+import Navigation from "../components/page/navigation"
+import Post from "../components/elements/post/post"
+import PostForm from "../components/elements/post/postForm"
+
 const getData = async () => {
   const res = await fetch(process.env.STRAPI_API_ENDPOINT + '/posts?populate=*')
 
@@ -13,13 +17,17 @@ export default async function Page() {
 
   return (
     <>
-      {
-        posts.data.map((post) => {
-          return (
-            <h2 key={post}>{post.attributes.body}</h2>
-          )
-        })
-      }
+      <Navigation />
+      <div className="mr-10 ml-10 space-y-10">
+        <PostForm />
+        {
+          posts.data.map((post) => {
+            return (
+              <Post key={post.id} title={post.attributes.title} body={post.attributes.body} />
+            )
+          })
+        }
+      </div>
     </>
   )
 }
