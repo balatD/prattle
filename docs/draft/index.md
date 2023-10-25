@@ -27,4 +27,3 @@ Basic draft of functionality. What should Prattle offer and how?
 ### Needs additional work / extra features
 
 - Authentication Service - strapi implementation, redirects for when not authenticated
-

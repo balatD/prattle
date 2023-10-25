@@ -1,6 +1,8 @@
-import './globals.css'
-import type { Metadata } from 'next'
+import './globals.css';
+import type { Metadata } from 'next';
 import { Roboto_Slab, Roboto } from 'next/font/google';
+import SessionProvider from '../components/providers/SessionProvider';
+import { getServerSession } from 'next-auth';
 
 const roboto = Roboto({
   weight: ['400', '700'],
@@ -20,15 +22,19 @@ export const metadata: Metadata = {
   description: 'Test description',
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const session = await getServerSession();
+
   return (
     <html lang='en'>
       <body className={`${roboto.className} homepage container mx-auto w-3/4 bg-dark text-white`}>
-        {children}
+        <SessionProvider session={session}>
+          {children}
+        </SessionProvider>
       </body>
     </html>
   )

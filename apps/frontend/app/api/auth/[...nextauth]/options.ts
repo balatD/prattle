@@ -1,37 +1,59 @@
-import type { NextAuthOptions } from "next-auth";
-import GithubProvider from 'next-auth/providers/github';
+import type { NextAuthOptions, User } from 'next-auth';
+import type UserResponse from '../../../../types/auth/user-response';
 import CredentialsProvider from 'next-auth/providers/credentials';
+
+const fetchUserData = async (credentials: { email: string, password: string }): Promise<UserResponse> => {
+    const response = await fetch(`${process.env.STRAPI_API_ENDPOINT}/auth/local`, {
+        method: 'POST',
+        headers: {
+            'Authorization': process.env.NEXTAUTH_STRAPI_API_KEY,
+            'Content-Type': 'application/json'
+        },
+
+        body: JSON.stringify({
+            identifier: credentials.email,
+            password: credentials.password
+        }),
+
+        cache: 'no-cache'
+    }).then(response => response.json());
+
+    if (!response.ok) {
+        return {
+            jwt: response.jwt as string,
+            id: response.user.id as string,
+            username: response.user.username as string,
+            email: response.user.email as string,
+            provider: response.user.provider as string,
+            confirmed: response.user.confirmed as boolean,
+            blocked: response.user.blocked as boolean,
+            createdAt: response.user.createdAt as string,
+            updatedAt: response.user.updatedAt as string
+        }
+    } else {
+        return response;
+    }
+}
 
 export const options: NextAuthOptions = {
     providers: [
-        GithubProvider({
-            clientId: process.env.NEXTAUTH_GITHUB_CLIENT_ID as string,
-            clientSecret: process.env.NEXTAUTH_GITHUB_SECRET as string
-        }),
-
         CredentialsProvider({
             name: 'Credentials',
             credentials: {
-                username: {
-                    label: "Username:",
-                    type: "text",
-                    placeholder: "***"
+                email: {
+                    label: 'E-Mail',
+                    type: 'email',
+                    placeholder: ''
                 },
                 password: {
-                    label: "Password:",
-                    type: "password",
-                    placeholder: "***"
+                    label: 'Password',
+                    type: 'password',
+                    placeholder: ''
                 }
             },
 
             async authorize(credentials) {
-                const user = { id: "1", name: "Dragan", password: "nextauth" }
-
-                if (credentials?.username === user.name && credentials?.password === user.password) {
-                    return user
-                } else {
-                    null
-                }
+                return fetchUserData(credentials);
             }
         })
     ],
