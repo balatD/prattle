@@ -6,6 +6,8 @@ export type Post = {
     updatedAt: string;
     public: boolean;
     title: string;
+    likes: number;
+    author: string;
     Comments: Array<Comment>;
 }
 

@@ -1,4 +1,4 @@
-import type { NextAuthOptions, User } from 'next-auth';
+import type { NextAuthOptions, Session, User } from 'next-auth';
 import type UserResponse from '../../../../types/auth/user-response';
 import CredentialsProvider from 'next-auth/providers/credentials';
 
@@ -57,4 +57,25 @@ export const options: NextAuthOptions = {
             }
         })
     ],
+    session: {
+        strategy: 'jwt'
+    },
+    callbacks: {
+        async session({ session, token }) {
+            session.id = token.id;
+            session.jwt = token.jwt;
+
+            return session;
+        },
+
+        async jwt({ token, user }) {
+            const isSignIn = user ? true : false;
+            if (isSignIn) {
+                token.id = user.id;
+                token.jwt = user.jwt;
+            }
+
+            return Promise.resolve(token);
+        },
+    }
 }

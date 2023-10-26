@@ -19,13 +19,13 @@ export default async function Page() {
   return (
     <>
       <Navigation />
-      <div className='mr-10 ml-10 space-y-10'>
 
+      <div className='mr-10 ml-10 space-y-10'>
         <PostForm />
         {
           posts.data.map((postResponse: PostResponse) => {
             return (
-              <Post key={postResponse.id} post={postResponse.attributes} />
+              <Post key={postResponse.id} id={postResponse.id} post={postResponse.attributes} />
             )
           })
         }
