@@ -384,6 +384,7 @@ export interface ApiPostPost extends Schema.CollectionType {
     public: Attribute.Boolean;
     title: Attribute.String;
     likes: Attribute.Integer;
+    test: Attribute.Blocks;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<'api::post.post', 'oneToOne', 'admin::user'> &

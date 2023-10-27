@@ -6,6 +6,8 @@ import { signIn, signOut, useSession } from 'next-auth/react';
 const Navigation = () => {
     const { data: session } = useSession();
 
+    console.log(session);
+
     return (
         <>
             <header className='m-8'>
