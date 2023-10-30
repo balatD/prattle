@@ -1,6 +1,5 @@
 // Imported with turborepo
 {
-  "extends": "prattle-shared-tsconfig/nextjs.json",
   "include": [
     "next-env.d.ts",
     "**/*.ts",
@@ -9,5 +8,6 @@
   ],
   "exclude": [
     "node_modules"
-  ]
+  ],
+  "extends": "prattle-shared-tsconfig/nextjs.json"
 }

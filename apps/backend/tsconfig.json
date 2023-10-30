@@ -1,5 +1,4 @@
 {
-  "extends": "@strapi/typescript-utils/tsconfigs/server",
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": "."
@@ -19,5 +18,11 @@
     "src/admin/",
     "**/*.test.*",
     "src/plugins/**"
-  ]
+  ],
+  "plugins": [
+    {
+      "name": "next"
+    }
+  ],
+  "extends": "@strapi/typescript-utils/tsconfigs/server",
 }

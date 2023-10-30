@@ -3,6 +3,9 @@
   "private": true,
   "version": "0.0.1",
   "description": "Prattle Backend",
+  "author": {
+    "name": "Dragan Balatinac"
+  },
   "scripts": {
     "dev": "strapi develop",
     "start": "strapi start",
@@ -13,13 +16,10 @@
     "prattle-shared-tsconfig": "*"
   },
   "dependencies": {
-    "@strapi/strapi": "4.14.3",
-    "@strapi/plugin-users-permissions": "4.14.3",
-    "@strapi/plugin-i18n": "4.14.3",
+    "@strapi/strapi": "4.15.0",
+    "@strapi/plugin-users-permissions": "4.15.0",
+    "@strapi/plugin-i18n": "4.15.0",
     "pg": "8.8.0"
-  },
-  "author": {
-    "name": "A Strapi developer"
   },
   "strapi": {
     "uuid": "14afd23c-a06b-495e-a21d-a59ce16d25cd"
