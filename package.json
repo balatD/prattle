@@ -10,6 +10,7 @@
     "build": "dotenv -- turbo run build",
     "start": "dotenv -- turbo run start",
     "dev": "dotenv -- turbo run dev",
+    "docs": "dotenv -- turbo run docs:dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "database": "docker compose up -d",

@@ -1,0 +1,34 @@
+{
+  "name": "prattle_docs",
+  "version": "0.0.1",
+  "description": "Documentation for Prattle",
+  "author": "Dragan Balatinac",
+  "private": true,
+  "scripts": {
+    "docs:dev": "dotenv -- cross-var next dev -p %DOCS_PORT%",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "react": "latest",
+    "react-dom": "latest",
+    "next": "latest",
+    "next-auth": "^4.23.2",
+    "nextra-theme-docs": "2.13.2",
+    "nextra": "2.13.2"
+  },
+  "devDependencies": {
+    "typescript": "latest",
+    "@types/react": "latest",
+    "@types/node": "latest",
+    "@types/react-dom": "latest",
+    "autoprefixer": "latest",
+    "postcss": "latest",
+    "tailwindcss": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "dotenv": "16.3.1",
+    "@mtrimolet/cross-var": "1.2.1"
+  }
+}

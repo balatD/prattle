@@ -23,6 +23,9 @@
         ".cache/**"
       ]
     },
+    "docs:dev": {
+      "cache": false
+    },
     "lint": {
       "outputs": []
     },
