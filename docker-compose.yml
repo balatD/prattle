@@ -1,7 +1,9 @@
 version: "3.8"
+name: ${DATABASE_DOCKER_CONTAINER_NAME}
 services:
   postgres:
     image: postgres:15
+    container_name: ${DATABASE_DOCKER_CONTAINER_NAME}_database
     environment:
       - POSTGRES_DB=mydb
       - POSTGRES_USER=test

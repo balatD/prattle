@@ -4,7 +4,15 @@ import PostForm from '../components/elements/post/postForm';
 import type PostResponse from '../types/elements/post-response';
 
 const getData = async () => {
-  const res = await fetch(process.env.STRAPI_API_ENDPOINT + '/posts?populate=*')
+  const res = await fetch(process.env.STRAPI_API_ENDPOINT + '/api/posts?populate=*',
+    {
+      method: 'GET',
+      headers: {
+        'Authorization': 'Bearer ' + process.env.STRAPI_API_TOKEN,
+        'Content-Type': 'application/json'
+      }
+    }
+  )
 
   if (!res.ok) {
     throw new Error('Failed to fetch data')
