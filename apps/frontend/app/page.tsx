@@ -1,6 +1,7 @@
 import Navigation from '../components/page/navigation';
 import Post from '../components/elements/post/post';
 import PostForm from '../components/elements/post/postForm';
+import InstantSearchForm from '../components/elements/search/instantSearch';
 import type PostResponse from '../types/elements/post-response';
 
 const getData = async () => {
@@ -28,7 +29,9 @@ export default async function Page() {
     <>
       <Navigation />
 
-      <div className='mr-10 ml-10 space-y-10'>
+      <InstantSearchForm />
+
+      {/* <div className='mr-10 ml-10 space-y-10'>
         <PostForm />
         {
           posts.data.map((postResponse: PostResponse) => {
@@ -37,7 +40,7 @@ export default async function Page() {
             )
           })
         }
-      </div>
+      </div> */}
     </>
   )
 }

@@ -19,6 +19,8 @@
     "@strapi/strapi": "4.15.0",
     "@strapi/plugin-users-permissions": "4.15.0",
     "@strapi/plugin-i18n": "4.15.0",
+    "strapi-plugin-generate-data": "1.0.30",
+    "strapi-plugin-meilisearch": "0.10.0",
     "pg": "8.8.0"
   },
   "strapi": {

@@ -14,7 +14,9 @@
     "react": "latest",
     "react-dom": "latest",
     "next": "latest",
-    "next-auth": "^4.23.2"
+    "next-auth": "^4.23.2",
+    "react-instantsearch": "7.3.0",
+    "@meilisearch/instant-meilisearch": "0.13.6"
   },
   "devDependencies": {
     "typescript": "latest",
